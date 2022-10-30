@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+ 
+  <!-- CSS only -->
+  <title>Bonafida Yazılım</title>
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+  integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+</head>
+
+<body class="text-white" style="background-color: black;">
+  
+    
+    <div class="container m-5">
+      <div id="formRow" class="row">
+        <div class="mb-3">
+          <label class="form-label">Excel Dosyası</label>
+          <input id="excelFile" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Konu</label>
+          <input id="subject" class="form-control" type="text">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Html Text</label>
+          <textarea id="htmlText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Gönderilecek ek var ise ekleyin</label>
+          <input id="htmlFile" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Key</label>
+          <input id="key" class="form-control" type="text">
+        </div>
+        <div class="mb-3">
+          <input id="btnSendApi" type="button" value="Gönder">
+        </div>
+      </div>
+      <div id="loadingRow" class="row justify-content-center" style="display: none;">
+        <div id="loading" class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+      </div>
+      &nbsp; Mesajlar Gönderiliyor <br>&nbsp; Bu işlem mail başına 30 saniye sürebilir.
+    </div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="module" src="./render.js" defer></script>
+</body>
+</html>
