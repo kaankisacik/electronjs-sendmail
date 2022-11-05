@@ -5,11 +5,12 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.69",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.69",
     "@electron-forge/maker-zip": "^6.0.0-beta.69",
-    "electron": "^21.2.0"
+    "electron": "^21.2.0",
+    "electron-winstaller": "^5.1.0"
   },
-  "name": "Bonafida Yazılım",
+  "name": "BonafidaYazilim",
   "version": "1.0.0",
-  "description": "Bonafida Yazılım",
+  "description": "BonafidaYazilim",
   "main": "index.js",
   "icon": "assets/images/favicon.ico",
   "config": {
@@ -95,10 +96,13 @@
     "yauzl": "^2.10.0"
   },
   "scripts": {
-    "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make --platform win32",
+    "make-mac": "electron-forge make --platform darwin",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
   "author": "",
   "license": "ISC"
